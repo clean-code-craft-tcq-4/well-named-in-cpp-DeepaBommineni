@@ -2,7 +2,7 @@
 
 using namespace TelCoColorCoder;
 
-inline void testNumberToPair(int pairNumber, TelCoColorCoder::MajorColor expectedMajor, TelCoColorCoder::MinorColor expectedMinor)
+void testNumberToPair(int pairNumber, TelCoColorCoder::MajorColor expectedMajor, TelCoColorCoder::MinorColor expectedMinor)
 {
 	TelCoColorCoder::ColorPair colorPair =
 		TelCoColorCoder::GetColorFromPairNumber(pairNumber);
@@ -11,7 +11,7 @@ inline void testNumberToPair(int pairNumber, TelCoColorCoder::MajorColor expecte
 	assert(colorPair.getMinor() == expectedMinor);
 }
 
-inline void testPairToNumber(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorColor minor, int expectedPairNumber)
+void testPairToNumber(TelCoColorCoder::MajorColor major, TelCoColorCoder::MinorColor minor, int expectedPairNumber)
 {
 	int pairNumber = TelCoColorCoder::GetPairNumberFromColor(major, minor);
 	std::cout << "Got pair number " << pairNumber << std::endl;
